@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>PDF转EPUB--在线转换工具</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/plugins/bootstraptable/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        body{
+            background-color: rgb(225, 229, 233);
+        }
+        .foot a{
+            color: rgba(65, 62, 64, 0.85);
+        }
+        .foot a:hover {
+            color:black;
+        }
+
+        .main a{
+            cursor: pointer;line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .main a:hover{
+            line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: black;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:white;
+        }
+        .main button:hover{
+             background-color: black;border-color: black;color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="height: 150px;width: 1920px;background-color: black">
+    <div style="position:absolute;left: 120px;top: 20px;width: 700px;">
+        <p style="position:absolute;font-style: italic; font-size: 67px;left: 120px;top: 20px;color:white">服务条款</p>
+    </div>
+
+
+    <div style="height: 130px;width:130px;position: absolute;left: 1670px;">
+        <img src="/img/logo.svg" style="position: absolute;height: 450px;left: -390px;top: -80px;">
+        <a style="position:absolute;font-style: italic;font-size: 25px;right: 45px;font-weight: bold;top: 80px;color: whitesmoke;" href="#" onclick="main()">PONVERE</a>
+    </div>
+</div>
+
+<div style="position: absolute;top: 240px;left: 240px;">
+    <div style="position: absolute;left: 0;top: 0;height: 200px;width: 1400px;">
+        <p style="font-size: 35px;color: black">服务说明</p>
+        <p style="position:absolute;font-size: 18px;top: 60px;color: black">
+            服务使用户能够将文件（“用户文件”）或多个文件（“用户文件”）从其 PDF 文件格式转换为 EPUB 文件格式。服务通过将上传的用户文件存储在 PONVERE 服务器上，将它们转换为 EPUB 文件格式（“转换的文件”）， 然后提供一个
+            链接来下载转换的文件。然后，您可以通过单击链接下载转换后的文件。
+            您承认并同意 PONVERE 可以在有正当理由的情况下制定有关使用服务的一般惯例和政策， 包括但不限于用户可以通过服务上传的文件的最大数量、
+            文件的最大大小用户可以通过服务转换的文件，服务将存储文件的最大小时数或天数，以及用户在给定时间段内可以访问服务的最大次数。PONVERE 保留在有正当理由的情况下随时更改或终止任何服务的权利。
+
+            在遵守本协议的所有条款和条件的前提下，PONVERE 应向您提供服务，并授予您个人的、不可转让的、可撤销的许可。
+        </p>
+    </div>
+    <div style="position: absolute;left: 0;top: 300px;height: 200px;width: 1400px;">
+        <p style="font-size: 35px;color: black">数据责任</p>
+        <p style="position:absolute;font-size: 18px;top: 60px;color: black">虽然我们努力确保服务没有错误，但在不影响我们根据适用的数据保护法律采取适当的技术和组织措施和程序以确保与您的个人数据风险相适应的安全级别的义务的情况下：
+        <p style="position:absolute;font-size: 18px;top: 90px;left: 20px;color: black"> • 我们不能保证我们的服务将与您的计算机兼容；</p>
+        <p style="position:absolute;font-size: 18px;top: 120px;left: 20px;color: black"> • 我们不能保证用户文件或转换后的文件不会被删除或丢失；；</p>
+        <p style="position:absolute;font-size: 18px;top: 150px;left: 20px;color: black"> • 您承认并同意，PONVERE 不对在提供服务期间存储或处理的用户文件或转换文件的删除，或用户文件中包含的任何数据、信息或内容的损坏或丢失负责，或转换文件；</p>
+        <p style="position:absolute;font-size: 18px;top: 180px;left: 20px;color: black"> • 您对归档和备份您的用户文件和数据承担全部责任，并对任何丢失或无法恢复的用户文件或数据承担全部责任。</p>
+    </div>
+</div>
+
+
+<div class="foot" style="position:absolute;left: 500px;top: 800px;width: 1000px;height: 150px;">
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 20px;top: 120px;" onclick="developer()" href="#">关于我们</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 420px;top: 120px;" onclick="privacy()" href="#">服务条款</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 820px;top: 120px;" onclick="service()" href="#">隐私</a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    function developer(){
+        window.location.href = "developer";
+    }
+    function privacy(){
+        window.location.href = "privacy";
+    }
+    function service(){
+        window.location.href = "service";
+    }
+    function main(){
+        window.location.href = "epub"
+    }
+</script>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>PDF转EPUB--在线转换工具</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/plugins/bootstraptable/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        progress {
+            background-color: black;
+            height: 25px;
+            width: 380px;
+            border-radius: 14px;
+        }
+        progress::-webkit-progress-bar {
+            background: #ccc;
+        }
+        progress::-webkit-progress-value {
+            background: black;
+        }
+        percentage{
+            position: fixed;
+            left: 320px;
+        }
+        body{
+            background-color: rgb(225, 229, 233);
+        }
+        .foot a{
+            color: rgba(65, 62, 64, 0.85);
+        }
+        .foot a:hover {
+            color:black;
+        }
+
+        .main a{
+            cursor: pointer;line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .main a:hover{
+            line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: black;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:white;
+        }
+        .main button:hover{
+             background-color: black;border-color: black;color:white;
+        }
+
+        .btn1{
+            position: absolute;left: 520px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .btn2 {
+            position: absolute;left: 870px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .btn3 {
+            position: absolute;left: 870px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .up{
+            position:absolute;left: 215px;top: 136px;border-radius: 50%;width: 50px;height: 50px;background-color: black;border-color: black;color: white;border-width: 4px;font-weight: bold;font-size: 25px;padding-top: 0;padding-bottom: 20px;
+        }
+        .up:hover{
+            background-color: white;border-color: black;color: black;
+        }
+        .img1{
+            height: 600px;position: absolute;left: -120px;top: -80px;
+        }
+    </style>
+</head>
+
+<body>
+<div style="position: absolute;left: 80px;top: 220px;width: 400px;height: 280px;background-color: rgb(225, 229, 233);">
+    <div style="overflow: hidden;width: 300px;height: 180px;position: absolute;left: 20px;top: 0;">
+        <img src="/img/1.svg" class="img1">
+    </div>
+    <p style="font-family: 宋体;font-size: 20px;font-weight: bold;position:absolute;top: 150px;left: 20px;">将 PDF 转换为 EPUB - 在线免费</p>
+</div>
+
+
+
+<div style="height: 150px;width: 100%;background-color: black">
+    <p style="position:absolute;font-style: italic; font-size: 67px;font-weight: bold;left: 120px;top: 20px;color:white">PDF&nbsp;&nbsp;TO&nbsp;&nbsp;EPUB</p>
+    <p style="position:absolute;font-style: italic;font-size: 25px;left: 130px;font-weight: bold;top: 100px;color: whitesmoke;">Online&nbsp;&nbsp;file&nbsp;&nbsp;conversion</p>
+</div>
+<div class="foot" style="position:absolute;left: 500px;top: 800px;width: 1000px;height: 150px;">
+    <p style="font-size: 18px;color: black" href="#">把PDF转成EPUB格式,PDF是一种页面固定大小的格式，不适合在所有的阅读器上阅读，EPUB适用所有大小的屏幕。</p>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 20px;top: 120px;" href="http://localhost:8088/developer">关于我们</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 420px;top: 120px;" href="#">服务条款</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 820px;top: 120px;" href="#">隐私</a>
+</div>
+
+
+
+<div class="main" style="position: absolute;height: 500px;width: 1200px;left: 600px;top: 200px; background-color: white;border-radius: 12px;box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;">
+<div class="progress-body">
+    <div style="position:absolute;left:220px;top:150px;height: 20px;width: 460px;border-radius: 14px;overflow: hidden;">
+        <progress></progress>
+    </div>
+</div>
+
+    <input class="up" type="button" value="➜" onclick="upload()">
+
+    <div style="position:absolute;left: 560px;top: 136px;border-radius: 50%;width: 50px;height: 50px;background-color: black;border-color: black;z-index: 5">
+        <p style="position: absolute;top: 11px;left:12px;color: white;font-size: 23px;text-align: center;font-weight: bold;">◀</p>
+    </div>
+
+<!--    这里插入转换的进度条!!!!-->
+    <div class="layui-form-item">
+
+        <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="executeprogress" style="background: #ccc;height: 20px;width: 350px;border-radius: 14px;position:absolute;left:600px;top:150px;overflow: hidden;">
+                        <div id="percentdiv" class="layui-progress-bar layui-bg-black" lay-percent=""></div>
+        </div>
+
+    </div>
+
+    <div style="position:absolute;left: 905px;top: 136px;border-radius: 50%;width: 50px;height: 50px;background-color: black;border-color: black">
+        <p style="position: absolute;top: 7px;left:15px;color: white;font-size: 25px;text-align: center;font-weight: bold;">✔</p>
+    </div>
+
+
+<div class="layui-form-item">
+    <form id="FileuploadForm" method="POST" action="/upload" enctype="multipart/form-data">
+        <a>
+            选择文件
+            <input type="file" style="opacity: 0;position: relative;left: -1px;top: -51px;height: 50px;width: 140px;border-radius: 12px;"  name="uploadFile" accept=".pdf" multiple id="uploadFile"/>
+        </a>
+
+    </form>
+</div>
+
+<div class="layui-form-item">
+
+        <button class="btn1" onclick="getPdfName()">转换</button>
+
+
+        <button class="btn2" onclick="getFile()">下载</button>
+
+</div>
+
+</div>
+
+<div style="position: absolute;height: 250px;width: 450px;left: 70px;top: 450px; background-color: black;border-radius: 12px;box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;">
+    <p style="position: absolute;left: 30px;top: 30px;font-size: 22px;font-weight: bold;color:white;font-family: 宋体">如何将PDF转换为EPUB文件？</p>
+    <p style="position: absolute;left: 40px;top: 70px;font-size: 22px;font-weight: bold;color:white;font-family: 宋体">1.点击选择文件选择要转换的PDF文件</p>
+    <p style="position: absolute;left: 40px;top: 110px;font-size: 22px;font-weight: bold;color:white;font-family: 宋体">2.点击选择文件上方的➜按钮上传文件</p>
+    <p style="position: absolute;left: 40px;top: 150px;font-size: 22px;font-weight: bold;color:white;font-family: 宋体">3.点击转换以转换您的PDF文件</p>
+    <p style="position: absolute;left: 40px;top: 190px;font-size: 22px;font-weight: bold;color:white;font-family: 宋体">4.下载已转换完成的EPUB文件</p>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">文件重命名(不填代表保留源文件名字)</h4>
+            </div>
+            <div class="modal-body" >
+                <form>
+                    <div class="form-group" id="formNewName">
+                        <input type="text" class="form-control" id="pdf1" disabled>
+                        <input type="text" class="form-control" id="newname1">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pdf2" disabled>
+                        <input type="text" class="form-control" id="newname2">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="pdf3" disabled>
+                        <input type="text" class="form-control" id="newname3">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" onclick="newName()" >提交更改</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+<script src="/js/bootstrap.js"></script>
+<script src="/plugins/bootstraptable/dist/bootstrap-table.min.js"></script>
+<script src="/plugins/bootstraptable/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+<script src="layui/layui.js"></script>
+<script type="text/javascript">
+    function newName(){
+        var oldname1=$('#pdf1').val();
+        var oldname2=$('#pdf2').val();
+        var oldname3=$('#pdf3').val();
+        var newname1=$("#newname1").val();
+        var newname2=$("#newname2").val();
+        var newname3=$("#newname3").val();
+        $.ajax({
+            url:"/webapi/newName",
+            data:{
+                on1:oldname1,
+                on2:oldname2,
+                on3:oldname3,
+                nn1:newname1,
+                nn2:newname2,
+                nn3:newname3
+            }
+        }).done(function (rs){
+            if (rs===-1){
+                alert("请先上传文件！")
+            }
+            else if(rs===-2){
+                alert("请勿使用相同的文件名！")
+            }
+            else {
+                $('#myModal').modal('hide');
+                submit()
+            }
+        })
+    }
+    function getPdfName(){
+        $.ajax({
+            url: "/webapi/getPdfName"
+        }).done(function (rs){
+            $("#pdf1").val(rs[0]);
+            $("#pdf2").val(rs[1]);
+            $("#pdf3").val(rs[2]);
+            $('#myModal').modal('show');
+        })
+    }
+
+    var element;
+    layui.use('element', function(){
+        element = layui.element;
+    });
+    //定义定时器
+    var timer;
+    //开始执行任务
+    function submit(){
+        //进度条设置为百分之0
+        element.progress('executeprogress', '0%');
+        //轮询获取进度条数据
+        getProcessvalue();
+        //请求后台
+        $.post("/execute",function(data){
+            //执行完成进度条设置为百分之百
+            element.progress('executeprogress', '100%');
+            //关闭定时器
+            clearInterval(timer);
+        });
+    }
+    //轮询请求进度数据
+    function getProcessvalue(){
+        //1秒请求一次进度条的数据
+        timer = setInterval(function () {
+            $.post("/getprocess",function(data){
+                //更新进度条
+                element.progress('executeprogress', data+'%');
+            });
+        }, 1000);
+    }
+    //下载文件
+    function getFile(){
+        window.location.href="/downloadZip"
+    }
+    // 上传文件
+    function upload(){
+        $("#msg").text("");
+        var checkFile = $("#uploadFile").val();
+        var msgInfo = "";
+        if(null==checkFile || ""==checkFile){
+            $("#msg").text("文件为空,请选择文件!");
+        }else{
+            var formData = new FormData(document.getElementById("FileuploadForm"));
+            $.ajax({
+                type: "POST",
+                enctype:'multipart/form-data',
+                url: '/upload',
+                data: formData,
+                cache:false,
+                processData:false,
+                contentType:false,
+                error:function(result){
+                    console.log("error");
+                    console.log(result);
+                    flag = false;
+                    $("#msg").text("访问服务器错误，请重试！");
+                },
+                success: function(result){
+                    console.log("success");
+                },
+                xhr: function () {
+                    var xhr = $.ajaxSettings.xhr();
+                    if (xhr.upload) {
+                        //处理进度条的事件
+                        xhr.upload.addEventListener("progress", progressHandle, false);
+                        //加载完成的事件
+                        xhr.addEventListener("load", completeHandle, false);
+                        //加载出错的事件
+                        xhr.addEventListener("error", failedHandle, false);
+                        //加载取消的事件
+                        xhr.addEventListener("abort", canceledHandle, false);
+                        //开始显示进度条
+                        showProgress();
+                        return xhr;
+                    }
+                }
+            }, 'json');
+        }
+    }
+    var start = 0;
+    //显示进度条的函数
+    function showProgress() {
+        start = new Date().getTime();
+        $(".progress-body").css("display", "block");
+    }
+    //隐藏进度条的函数
+    function hideProgress() {
+        $("#uploadFile").val('');
+        $('.progress-body .progress-speed').html("0 M/S, 0/0M");
+        $('.progress-body percentage').html("0%");
+        $('.progress-body .progress-info').html("请选择文件并点击上传文件按钮");
+        //$(".progress-body").css("display", "none");
+    }
+    //进度条更新
+    function progressHandle(e) {
+        $('.progress-body progress').attr({value: e.loaded, max: e.total});
+        var percent = e.loaded / e.total * 100;
+        var time = ((new Date().getTime() - start) / 1000).toFixed(3);
+        if(time == 0){
+            time = 1;
+        }
+        $('.progress-body .progress-speed').html(((e.loaded / 1024) / 1024 / time).toFixed(2) + "M/S, " + ((e.loaded / 1024) / 1024).toFixed(2) + "/" + ((e.total / 1024) / 1024).toFixed(2) + " MB. ");
+        $('.progress-body percentage').html(percent.toFixed(2) + "%");
+        if (percent == 100) {
+            $('.progress-body .progress-info').html("上传完成,后台正在处理...");
+        } else {
+            $('.progress-body .progress-info').html("文件上传中...");
+        }
+    };
+    //上传完成处理函数
+    function completeHandle(e) {
+        $('.progress-body .progress-info').html("上传文件完成。");
+        setTimeout(hideProgress, 2000);
+    };
+    //上传出错处理函数
+    function failedHandle(e) {
+        $('.progress-body .progress-info').html("上传文件出错, 服务不可用或文件过大。");
+    };
+    //上传取消处理函数
+    function canceledHandle(e) {
+        $('.progress-body .progress-info').html("上传文件取消。");
+    };
+</script>
+</body>
+</html>

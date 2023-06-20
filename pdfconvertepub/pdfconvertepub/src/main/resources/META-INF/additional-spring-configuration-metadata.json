@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "spring.servlet.datasource",
+      "type": "java.lang.String",
+      "description": "Description for spring.servlet.datasource."
+  }
+] }

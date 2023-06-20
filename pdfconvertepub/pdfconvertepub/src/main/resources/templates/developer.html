@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <title>PDF转EPUB--在线转换工具</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/plugins/bootstraptable/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        body{
+            background-color: rgb(225, 229, 233);
+        }
+        .foot a{
+            color: rgba(65, 62, 64, 0.85);
+        }
+        .foot a:hover {
+            color:black;
+        }
+
+        .main a{
+            cursor: pointer;line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: white;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:black;
+        }
+        .main a:hover{
+            line-height:50px;text-decoration:none;text-align:center;position: absolute;left: 170px;top: 290px;font-weight: bold; background-color: black;font-size: 18px; border-radius: 12px;border-style: solid;border-width: 2px;border-color: black;height: 50px;width: 140px; color:white;
+        }
+        .main button:hover{
+             background-color: black;border-color: black;color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+<div style="height: 150px;width: 1920px;background-color: black">
+    <div style="position:absolute;left: 120px;top: 20px;width: 700px;">
+        <p style="position:absolute;font-style: italic; font-size: 67px;left: 120px;top: 20px;color:white">关于我们</p>
+    </div>
+
+    <div style="height: 130px;width:130px;position: absolute;left: 1670px;">
+        <img src="/img/logo.svg" style="position: absolute;height: 450px;left: -390px;top: -80px;">
+        <a style="position:absolute;font-style: italic;font-size: 25px;right: 45px;font-weight: bold;top: 80px;color: whitesmoke;" href="#" onclick="main()">PONVERE</a>
+    </div>
+</div>
+
+<div style="position: absolute;top: 240px;left: 240px;">
+    <div style="position: absolute;left: 0;top: 0;height: 200px;width: 1400px;">
+        <p style="font-size: 35px;color: black">我们的任务</p>
+        <p style="position:absolute;font-size: 22px;top: 60px;color: black">PONVERE致力于将PDF文件转换为EPUB，提供免费的转换服务，支持文件重命名。</p>
+        <p style="position:absolute;font-size: 22px;top: 100px;color: black">我们厌倦了网络上稀缺的转换网站和各种各样收费转换软件，有时候一项简单的转换任务往往大费周章。本着共享的精神，PONVERE诞生了，它将免费为你服务。</p>
+    </div>
+    <div style="position: absolute;left: 0;top: 280px;height: 200px;width: 1400px;">
+        <p style="font-size: 35px;color: black">开发者团队</p>
+        <p style="position:absolute;font-size: 22px;top: 60px;color: black">PONVERE团队由来自重庆工商大学的五位成员组成：黄培、李浩、徐思杨、何先宇、王子涵。</p>
+    </div>
+    <div style="position: absolute;left: 0;top: 480px;height: 200px;width: 1400px;">
+        <p style="font-size: 35px;color: black">广告</p>
+        <p style="position:absolute;font-size: 22px;top: 60px;color: black">我们不在PONVERE上投放任何广告，请放心使用。</p>
+    </div>
+
+</div>
+
+
+<div class="foot" style="position:absolute;left: 500px;top: 800px;width: 1000px;height: 150px;">
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 20px;top: 120px;" onclick="developer()" href="#">关于我们</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 420px;top: 120px;" onclick="privacy()" href="#">服务条款</a>
+    <a style="text-decoration: none;font-size: 18px;font-weight:bold;position: absolute;left: 820px;top: 120px;" onclick="service()" href="#">隐私</a>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    function developer(){
+        window.location.href = "developer";
+    }
+    function privacy(){
+        window.location.href = "privacy";
+    }
+    function service(){
+        window.location.href = "service";
+    }
+    function main(){
+        window.location.href = "epub"
+    }
+</script>
